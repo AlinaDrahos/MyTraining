@@ -20,17 +20,17 @@ namespace Exercise16
         public static void Method(string myWord)
         {
             string newWord = null;
-            string firstLetter = null;
-            string lastLetter = null;
+            string firstLetter = myWord[0].ToString();
+            string lastLetter = myWord[(myWord.Length) - 1].ToString();
             for (int i = 0; i < myWord.Length; i++)
             {
-                firstLetter = myWord[0].ToString();
-                lastLetter = myWord[(myWord.Length) - 1].ToString();
                 if (i!=0 && i!=(myWord.Length-1) )
                 {
                     newWord += myWord[i];
                 }
             }
+            //string mystr= if(myWord.......){"yahoo"}else{"boo"}
+            string mystr = myWord.Length > 1 ? "yahoo" : "boo";
 
             newWord = lastLetter + newWord + firstLetter;
             Console.WriteLine(newWord);
